@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Happy Valentine Mal</title>
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9e4e8;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+}
+
+/* Envelope */
+.envelope {
+    width: 100%;
+    height: 220px;
+    background: #c8a165;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: opacity 0.8s ease;
+}
+
+/* Flap */
+.flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: #b88b4a;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Envelope Text */
+.envelope-text {
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    transform: translateY(-50%);
+    text-align: center;
+font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: clamp(20px, 7vw, 30px);
+    color: #302d2d;
+    padding: 0 10px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: rgb(180, 29, 29);
+    color: white;
+    font-size: clamp(14px, 4vw, 18px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3b0606;
+}
+
+/* Letter (HIDDEN INITIALLY) */
+.letter {
+    display: none;
+    margin-top: 20px;
+    background: #9c5d2a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(16px, 4.5vw, 22px);
+    line-height: 1.6;
+    color: #000000;
+    max-height: 70vh;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Visible Letter */
+.letter.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide Envelope */
+.hide {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <div id="envelopeSection">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="envelope-text">Happy Valentine Mal <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+</svg>
+
+</div>
+        </div>
+
+        <button onclick="openLetter()">Open</button>
+    </div>
+
+    <div class="letter" id="letter">
+        Happy valentines day Mal <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+</svg>.<br><br>
+
+        I know this isn't much and I dont know how to be all romantic and I'm not able to do all those flashy cards and flowers and bouques. <br><br>
+        
+        But this is what I know how to do best and I hope you like it. I know its been quite the journey, a lot of fights and arguments, disagreements and all sorts but yet you still chose me and I'm grateful.<br><br>
+
+        I don't exactly know how to be all poetic or anything like that so I'd just end with this.<br><br>
+
+        I love you and I always will. And I will always choose you no matter what.<br><br>
+
+        I love you <i>3000</i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.5 4.5 0 0 1 7.965 13a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242s1.46-.118 2.152-.242a27 27 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434m6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434"/>
+</svg>.<br><br>
+
+        Love Eve <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-open-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 7.384v5.733l3.479-2.087q.224.414.558.83l-4.002 2.402A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738l-4.002-2.401q.334-.418.558-.831L15 13.117V7.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 6.217V5.4a1 1 0 0 0-.53-.882zM7.06.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765zM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg>
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    const envelopeSection = document.getElementById("envelopeSection");
+    const letter = document.getElementById("letter");
+
+    envelopeSection.classList.add("hide");
+
+    setTimeout(() => {
+        letter.classList.add("show");
+    }, 200);
+}
+</script>
+
+</body>
+</html>
